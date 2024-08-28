@@ -8,6 +8,7 @@ import (
 
 func init() {
 	envloader.Loadenv()
+	envloader.ConnectToDB()
 }
 
 func main() {
