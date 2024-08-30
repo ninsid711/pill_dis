@@ -24,9 +24,9 @@ type Doctor struct {
 }
 
 type Medicine struct {
-	MedId      string `json:"medid" gorm:"primaryKey"`
-	Name       string `json:"name" gorm:"not null;unique"`
-	Dosage     uint   `json:"dosage" gorm:"not null"`
-	IntakeTime string `json:"intaketime" gorm:"not null"`
-	ExpDate    string `json:"expdate" gorm:"not null"`
+	MedId           string `json:"medid" gorm:"primaryKey"`
+	Name            string `json:"name" gorm:"not null;unique"`
+	DosageToBeTaken uint   `json:"dosage" gorm:"not null"`
+	IntakeTime      string `json:"intaketime" gorm:"not null"`
+	ExpDate         string `json:"expdate" gorm:"not null"`
 }
