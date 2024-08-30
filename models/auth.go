@@ -4,7 +4,7 @@ import "gorm.io/gorm"
 
 type Patient struct {
 	gorm.Model
-	PatientId    string     `json:"patientid" gorm:"primaryKey"`
+	ID           string     `json:"patientid" gorm:"primaryKey"`
 	Name         string     `json:"name" gorm:"not null"`
 	Age          uint       `json:"age" gorm:"not null"`
 	Gender       string     `json:"gender" gorm:"not null"`
@@ -15,7 +15,7 @@ type Patient struct {
 
 type Doctor struct {
 	gorm.Model
-	DoctorId     string    `json:"doctorid" gorm:"primaryKey"`
+	ID           string    `json:"doctorid" gorm:"primaryKey"`
 	Name         string    `json:"name" gorm:"not null; unique"`
 	Age          uint      `json:"age" gorm:"not null"`
 	Gender       string    `json:"gender" gorm:"not null"`
@@ -24,7 +24,7 @@ type Doctor struct {
 }
 
 type Medicine struct {
-	MedId           string `json:"medid" gorm:"primaryKey"`
+	ID              string `json:"medid" gorm:"primaryKey"`
 	Name            string `json:"name" gorm:"not null;unique"`
 	DosageToBeTaken uint   `json:"dosage" gorm:"not null"`
 	IntakeTime      string `json:"intaketime" gorm:"not null"`
